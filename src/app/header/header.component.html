@@ -1,0 +1,21 @@
+<header>
+
+  <nav>
+    <a routerLink="/team" routerLinkActive="styleMenuActive">Equipo</a>
+    <a routerLink="/championships" routerLinkActive="styleMenuActive">Campeonatos</a>
+  </nav>
+
+  <a routerLink="/" class="logo">LOGO</a>
+
+  <input type="text" class="searcher" placeholder="Searcher">
+
+</header>
+
+<div class="breadcrumbs">
+  <ul>
+    <li><a class="breadcrumbs-link" routerLink="/" routerLinkActive="styleMenuActive">Home</a></li>
+    <li *ngIf="hola"><a class="breadcrumbs-link">asd</a></li>
+    <li *ngIf="adios"><a class="breadcrumbs-link">gggg</a></li>
+    <li><img class="icon-location" src="../../assets/icons/icon-location.svg" /></li>
+  </ul>
+</div>

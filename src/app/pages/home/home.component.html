@@ -1,0 +1,20 @@
+<main>
+  <h1>MRT</h1>
+  <p>descripcion ...</p>
+  <p>Somos MRT Mancos Racing Team blablablablabla blablablablabla</p>
+
+  <section class="driver-list-home-down-position">
+    <h2>Equipo</h2>
+    <div class="driver-list">
+      <app-driver-list
+      *ngFor="let user of usersService.racerList"
+      [currentUser]="user"
+      ></app-driver-list>
+    </div>
+  </section>
+</main>
+
+<section class="video-list">
+  <h2>ultimos videos</h2>
+  <app-video-list></app-video-list>
+</section>

@@ -1,0 +1,28 @@
+.video-list {
+  width: 100%;
+  background-color: lightgrey;
+}
+
+.scroll-video-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.card-video-list {
+  width: 25%;
+  margin-bottom: 1em;
+}
+
+.card-video-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.card-video-list-img {
+  object-fit: cover;
+}
+
+.card-video-list-title {
+  margin: 8px 1em 0 0;
+}

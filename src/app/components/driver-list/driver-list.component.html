@@ -1,0 +1,30 @@
+<div routerLinkActive="driver-link-active">
+  <a class="driver-list-card" (click)="onProfile()" [routerLink]="['/team', currentUser.urlProfile]">
+    <p>{{ currentUser.alias }}</p>
+    <img class="driver-list-card-img"
+      src="{{ currentUser.profileImg }}"
+      alt="{{ currentUser.name }}{{ currentUser.lastName }}">
+  </a>
+</div>
+
+<!-- NUEVAS VERSION, NO DINAMICA, CON TODOS LOS USUARIOS AQUI -->
+<!--div routerLinkActive="driver-link-active">
+  <a class="driver-list-card" routerLink="/team/JosePintado">
+    <p>Jose</p>
+    <img class="driver-list-card-img" src="../../assets/images/profile/jose-pintado.jpg" alt="Jose Pintado">
+  </a>
+</div>
+
+<div routerLinkActive="driver-link-active">
+  <a class="driver-list-card" routerLink="/team/JaviOrtega">
+    <p>Javi</p>
+    <img class="driver-list-card-img" src="../../assets/images/profile/yayo.jpg" alt="Javi Ortega">
+  </a>
+</div>
+
+<div routerLinkActive="driver-link-active">
+  <a class="driver-list-card" routerLink="/team/PabloGarcia">
+    <p>Pablo</p>
+    <img class="driver-list-card-img" src="../../assets/images/profile/pablo-garcia.png" alt="Pablo Garcia">
+  </a>
+</div-->

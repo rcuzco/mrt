@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: "Noto Serif", serif;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  background-color: #f6f6f6;
+}
+
+img {
+  object-fit: cover;
+}
+
+a:active, a:hover {
+  outline: none;
+}
+
+.driver-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: orange;
+
+  .driver-list-card-img {
+    max-width: 35px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: all 0.1s ease-in-out;
+  }
+
+  .driver-list-card-img:hover {
+    filter: grayscale(0);
+  }
+
+}
+
+.driver-list img {
+
+}
+
+.driver-list-card:active,
+.driver-list-card:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.drivel-list-full-data-style {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.drivel-list-full-data-style img {
+  max-width: 180px;
+}
+
+.driver-profile {}
+
+.driver-profile-img {
+  width: 200px;
+}

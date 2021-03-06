@@ -1,0 +1,10 @@
+<b>VIDEO LIST</b>
+
+<div class="scroll-video-list" *ngIf="videos.items">
+  <div class="card-video-list" *ngFor="let video of videos.items; index as i;">
+    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+      <img class="card-driver-list-img" [src]="video.snippet.thumbnails.medium.url" alt="{{video.snippet.title}}">
+      <p class="card-video-list-title">{{video.snippet.title}}</p>
+    </a>
+  </div>
+</div>

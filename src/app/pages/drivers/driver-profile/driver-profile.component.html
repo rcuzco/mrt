@@ -1,0 +1,28 @@
+
+<div class="driver-list">
+  <app-driver-list
+  *ngFor="let user of usersService.racerList"
+  [currentUser]="user"
+  ></app-driver-list>
+</div>
+
+<main class="driver-profile">
+  <h2>Equipo</h2>
+
+  <img class="driver-profile-img" src="{{ currentUser.profileImg }}" alt="{{ currentUser.twitter }}">
+  <p>{{ currentUser.name }} {{ currentUser.lastName }}</p>
+  <p>{{ currentUser.description }}</p>
+  <p>{{ currentUser.youtubeTotalVideos }}</p>
+  <ul>
+    <li>{{ currentUser.twitter }}</li>
+    <li>{{ currentUser.youtube }}</li>
+  </ul>
+
+  <p>Fotos</p>
+  <app-photo-list></app-photo-list>
+</main>
+
+<section class="video-list">
+  <p>videos del piloto</p>
+  <app-video-list></app-video-list>
+</section>

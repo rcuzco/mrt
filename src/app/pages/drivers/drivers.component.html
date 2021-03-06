@@ -1,0 +1,19 @@
+<main>
+  <h2>EQUIPO</h2>
+  <div class="drivel-list-full-data-style">
+    <app-driver-list
+    *ngFor="let user of usersService.racerList"
+    [currentUser]="user"
+    ></app-driver-list>
+  </div>
+</main>
+
+<section>
+  <p>ultimos videos</p>
+  <app-video-list></app-video-list>
+</section>
+
+<section>
+  <p>Fotos del equipo</p>
+  <app-photo-list></app-photo-list>
+</section>
