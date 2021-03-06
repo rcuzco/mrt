@@ -1,11 +1,13 @@
-<div routerLinkActive="driver-link-active">
-  <a class="driver-list-card" (click)="onProfile()" [routerLink]="['/team', currentUser.urlProfile]">
-    <p>{{ currentUser.alias }}</p>
-    <img class="driver-list-card-img"
-      src="{{ currentUser.profileImg }}"
-      alt="{{ currentUser.name }}{{ currentUser.lastName }}">
-  </a>
+<div *ngFor="let user of racers" >
+  <div routerLinkActive="driver-link-active">
+    <a class="driver-list-card" (click)="onProfile(user)" [routerLink]="['/team', user.urlProfile]">
+      <p>{{ user.alias }}</p>
+      <img class="driver-list-card-img" src="{{ user.profileImg }}"
+        alt="{{ user.name }}{{ user.lastName }}">
+    </a>
+  </div>
 </div>
+
 
 <!-- NUEVAS VERSION, NO DINAMICA, CON TODOS LOS USUARIOS AQUI -->
 <!--div routerLinkActive="driver-link-active">

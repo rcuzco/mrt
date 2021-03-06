@@ -1,9 +1,6 @@
 
 <div class="driver-list">
-  <app-driver-list
-  *ngFor="let user of usersService.racerList"
-  [currentUser]="user"
-  ></app-driver-list>
+  <app-driver-list [racers]="racers" (profileClick)="mostrarDatosDeRacer($event)"></app-driver-list>
 </div>
 
 <main class="driver-profile">

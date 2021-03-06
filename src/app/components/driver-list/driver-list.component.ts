@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
 import { UsersModel } from './../../models/users.model';
 
 
@@ -13,7 +12,9 @@ import { UsersModel } from './../../models/users.model';
 export class DriverListComponent implements OnInit {
 
   // metemos a los usuarios con un bucle desde el componente padre
-  @Input() public currentUser: UsersModel;
+  //@Input() public currentUser: UsersModel;
+  @Input() public racers:UsersModel[];
+  @Output() public profileClick:EventEmitter<UsersModel> = new EventEmitter();
 
   constructor(
       private activatedRoute: ActivatedRoute,
@@ -22,15 +23,21 @@ export class DriverListComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(Params => {
-      console.log('HEY' + Params['team/id']);
+      console.log('HEY',Params);
+      
     });
+
+    console.log("init - racers",this.racers);
 
     // console.log('pilotos', this.currentUser);
     // if (this.currentUser.alias === '') { this.currentUser.alias = this.currentUser.name; }
   }
 
-  onProfile() {
-    // this.router.navigate(['team']);
+  onProfile(user:UsersModel) 
+  {
+    console.log("user a mostrar", user);
+    this.profileClick.emit(user);
+     
   }
 
 

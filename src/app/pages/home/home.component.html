@@ -6,10 +6,7 @@
   <section class="driver-list-home-down-position">
     <h2>Equipo</h2>
     <div class="driver-list">
-      <app-driver-list
-      *ngFor="let user of usersService.racerList"
-      [currentUser]="user"
-      ></app-driver-list>
+      <app-driver-list [racers]="racers"></app-driver-list>
     </div>
   </section>
 </main>

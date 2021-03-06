@@ -13,17 +13,30 @@ export class DriverProfileComponent implements OnInit {
 
   currentUrl: string;
   currentUser: UsersModel;
+  racers: UsersModel[];
 
   constructor(private route: ActivatedRoute, public usersService: UsersService) {
 
+    this.racers = this.usersService.racerList;
     this.currentUrl = this.route.snapshot.params.id;
-    this.usersService.racerList.forEach(someUser => {
-      if (someUser.urlProfile === this.currentUrl) { return this.currentUser = someUser; }
+    this.racers.forEach(someUser => {
+      if (someUser.urlProfile === this.currentUrl) 
+      { 
+        console.log("this.currentUser",someUser);
+        return this.currentUser = someUser; 
+      }
     });
   }
 
-  ngOnInit() {
-    console.log("COJO EL SEGUNDO?", this.currentUrl);
+  ngOnInit() 
+  {
+    
+  }
+
+  mostrarDatosDeRacer(datosRacer:UsersModel)
+  {
+    console.log("datos recibidos", datosRacer);
+    this.currentUser = datosRacer;
   }
 
 }

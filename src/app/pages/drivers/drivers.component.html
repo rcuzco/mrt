@@ -1,10 +1,7 @@
 <main>
   <h2>EQUIPO</h2>
   <div class="drivel-list-full-data-style">
-    <app-driver-list
-    *ngFor="let user of usersService.racerList"
-    [currentUser]="user"
-    ></app-driver-list>
+    <app-driver-list [racers]="racers"></app-driver-list>
   </div>
 </main>
 

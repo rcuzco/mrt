@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsersModel } from 'src/app/models/users.model';
 import { UsersService } from '../../services/users.service';
 
 @Component({
@@ -9,6 +10,12 @@ import { UsersService } from '../../services/users.service';
 
 export class HomeComponent {
 
-  constructor(public usersService: UsersService) {}
+  racers: UsersModel[];
+
+  constructor(public usersService: UsersService) 
+  {
+    this.racers = this.usersService.racerList;
+    console.log("this.racers",this.racers);
+  }
 
 }
